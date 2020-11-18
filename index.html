@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>ToDo list</title>
+</head>
+<body>
+  <div class="app">
+    <div class="app__header">
+      <h1 class="app__title">Ваш список задач</h1>
+    </div>
+    <div class="app__tasks">
+      <div class="app__task">    
+        <label class="app__label" >
+          <input type="checkbox" class="app__check">
+          <span class="app__fake"></span>
+          <span class="app__text">Помыть посуду</span>
+        </label> 
+      </div>
+      <div class="app__task">    
+        <label class="app__label" >
+          <input type="checkbox" class="app__check">
+          <span class="app__fake"></span>
+          <span class="app__text">Помыть посуду</span>
+        </label> 
+      </div>
+       
+    </div>
+    <button class="app__add"></button>  
+  </div>
+
+  <div class="modal">
+    <div class="modal__header">
+      <h2 class="modal__title">Добавить задачу</h2>
+    </div>
+    <div class="modal__tasks">
+      <input type="text" class="modal__task" placeholder="Что нужно сделать?">
+    </div>
+    <button class="modal__add">Добавить</button>
+    <button class="modal__close">+</button>
+  </div>
+  
+  
+  <script src='script.js'></script>
+</body>
+</html>

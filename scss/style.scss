@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #D9DBE9;
+  font-family: 'Poppins', sans-serif;
+}
+.app, .modal { 
+  width: 320px;
+  margin: 85px auto 0;
+  background: #FCFCFC;
+  box-shadow: 10px 10px 40px rgba(124, 57, 255, 0.1);
+  border-radius: 16px;
+}
+.app {
+  position: relative;
+  min-height: 450px;
+  &__header {
+    padding: 20px 0;
+    background: linear-gradient(114.44deg, #7433FF 0%, #FFA3FD 100%);
+    border-radius: 16px 16px 0px 0px;
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.75px;
+    color: #FCFCFC;
+  }
+  &__tasks {
+    
+  }
+  &__task {
+    padding: 15px; 
+    border-bottom: 1px solid #D9DBE9;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+  &__check {
+    display: none;
+  }
+  &__fake {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #D6D8E7;
+    position: relative;
+    transition: all 0.3s;
+    &::before {
+      content: url('../icons/check.svg');
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: -3px;
+      left: 0;
+      opacity: 0; 
+    }
+  }
+
+  &__check:checked + &__fake::before {
+    opacity: 1;
+  }
+
+  &__add {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: linear-gradient(114.44deg, #7433FF 0%, #FFA3FD 100%);
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    &::before {
+      width: 24px;
+      height: 2px;
+    }
+    &::after {
+      width: 2px;
+      height: 24px;
+    }
+    &:hover {
+      box-shadow: 2px 2px 20px rgba(124, 57, 255, 0.5);
+    }
+
+  }
+}
+
+.modal {
+}
+.modal__header {
+}
+.modal__title {
+}
+.modal__tasks {
+}
+.modal__task {
+}
+.modal__add {
+}
+.modal__close {
+}
