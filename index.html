@@ -27,24 +27,25 @@
           <span class="app__fake"></span>
           <span class="app__text">Помыть посуду</span>
         </label> 
-      </div>
-       
+      </div>      
     </div>
-    <button class="app__add"></button>  
+    <div class="overlay"></div>
+    <button class="app__add app__add-active"></button>  
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title">Добавить задачу</h2>
+      </div>
+      <form class="modal__tasks">
+        <input type="text" class="modal__task" placeholder="Что нужно сделать?">
+        <button class="modal__add">Добавить</button>
+      </form>
+    </div>
+
   </div>
 
-  <div class="modal">
-    <div class="modal__header">
-      <h2 class="modal__title">Добавить задачу</h2>
-    </div>
-    <div class="modal__tasks">
-      <input type="text" class="modal__task" placeholder="Что нужно сделать?">
-    </div>
-    <button class="modal__add">Добавить</button>
-    <button class="modal__close">+</button>
-  </div>
+
   
   
-  <script src='script.js'></script>
+  <script src='js/script.js'></script>
 </body>
 </html>

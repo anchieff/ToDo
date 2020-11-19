@@ -8,14 +8,15 @@ body {
 }
 .app, .modal { 
   width: 320px;
-  margin: 85px auto 0;
   background: #FCFCFC;
-  box-shadow: 10px 10px 40px rgba(124, 57, 255, 0.1);
   border-radius: 16px;
 }
 .app {
+  margin: 85px auto 0;
   position: relative;
   min-height: 450px;
+  box-shadow: 10px 10px 40px rgba(124, 57, 255, 0.1);
+  overflow: hidden;
   &__header {
     padding: 20px 0;
     background: linear-gradient(114.44deg, #7433FF 0%, #FFA3FD 100%);
@@ -113,16 +114,79 @@ body {
 }
 
 .modal {
+  position: absolute;
+  top: -225px;
+  left: 0;
+  &-active {
+    top: 0;  
+  }
+  
+  &__header {
+    padding: 20px 0;
+    background: linear-gradient(114.44deg, #7433FF 0%, #FFA3FD 100%);
+    border-radius: 16px 16px 0px 0px;
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.75px;
+    color: #FCFCFC;
+  }
+  &__tasks {
+    padding: 15px; 
+    text-align: right;
+  }
+  &__task {
+    width: 100%;
+    background: #EFF0F7;
+    border-radius: 16px;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.75px;
+    color: #A0A3BD;
+    &:focus {
+      outline: none;
+      background: #FCFCFC;
+      border: 1px solid #14142B;
+      border-radius: 16px;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.75px;
+      color: #4E4B66;
+    }
+  }
+  &__add {
+    margin-top: 28px;
+    width: 120px;
+    height: 40px;
+    background: #823FFF;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: #F7F7FC;
+    &:hover {
+      box-shadow: 2px 2px 20px rgba(124, 57, 255, 0.5);
+    }
+  }
 }
-.modal__header {
-}
-.modal__title {
-}
-.modal__tasks {
-}
-.modal__task {
-}
-.modal__add {
-}
-.modal__close {
+
+
+
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #14142B;
+  opacity: 0.45;
 }
